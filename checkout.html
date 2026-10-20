@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050b24">
+<title>Checkout | YAPSTech</title>
+<meta name="description" content="Complete your order with YAPSTech. Delivery across Uganda, pay by MTN MoMo, Airtel Money or cash on delivery.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://brians124.github.io/YAPSTech/checkout.html">
+<link rel="icon" href="logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+header,.drawer{--red:#ff2b43;--cyan:#2fd0ff;--head:64px;--gut:clamp(16px,4vw,56px);font-family:Poppins,'Segoe UI',system-ui,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-padding-top:var(--head)}a{color:inherit;text-decoration:none}svg.i{width:100%;height:100%;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}.wrap{width:100%;max-width:1240px;margin:0 auto;padding-left:max(var(--gut),env(safe-area-inset-left,0px));padding-right:max(var(--gut),env(safe-area-inset-right,0px))}
+header{position:sticky;top:0;z-index:50;height:var(--head);background:linear-gradient(180deg,#081544,#071033);border-bottom:1px solid #1d3d9a;padding-top:env(safe-area-inset-top,0px);box-sizing:content-box}
+header .wrap{height:var(--head);display:flex;align-items:center;gap:clamp(12px,2vw,28px)}
+.logo{display:flex;align-items:center;gap:6px;flex:none}
+.logo .mark{font-size:2.3rem;letter-spacing:-.1em;margin-right:.1em}
+.logo .lt{display:flex;flex-direction:column;gap:2px}
+.logo .lt .t3d{font-size:1.7rem}
+.logo small{font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:.62rem;letter-spacing:.06em;color:#27d3ff;text-shadow:0 0 8px #0af8;line-height:1}
+nav{display:flex;gap:clamp(12px,1.8vw,26px);margin-left:auto;font-size:.82rem;font-weight:500}
+nav a{position:relative;padding:22px 0;white-space:nowrap;transition:color .2s}
+nav a:hover,nav a.on{color:#ff3b4a}
+nav a.on::after{content:"";position:absolute;left:0;right:0;bottom:12px;height:2px;background:var(--red);box-shadow:0 0 8px #f03;border-radius:2px}
+.hr{display:flex;align-items:center;gap:14px;flex:none}
+.search{display:flex;align-items:center;gap:8px;width:170px;height:34px;border:1px solid #2a5bd8;border-radius:999px;padding:0 12px;background:#06102f;font-size:.74rem;color:#b9c6ea}
+.search input{flex:1;min-width:0;background:none;border:0;color:#fff;font:inherit;outline:0}
+.search input::placeholder{color:#b9c6ea}
+.search svg{width:16px;height:16px;flex:none}
+.hr .ib{width:22px;height:22px;position:relative;display:block}
+.hr .ib b{position:absolute;right:-9px;top:-9px;width:16px;height:16px;border-radius:50%;background:#ff1f3a;font-size:.6rem;display:flex;align-items:center;justify-content:center}
+.burger{display:none;width:42px;height:42px;border:1px solid #2a5bd8;border-radius:10px;background:#06102f;padding:10px;cursor:pointer}
+.burger svg{stroke-width:2.4}
+.logo-img{height:48px;width:auto;display:block}
+@media (max-width:620px){.logo-img{height:40px}}
+@media(max-width:1100px){.search{display:none}}@media(max-width:900px){nav{position:fixed;left:0;right:0;top:calc(var(--head) + env(safe-area-inset-top,0px));flex-direction:column;gap:0;margin:0;background:#071033f7;border-bottom:1px solid #1d3d9a;padding:8px max(var(--gut),env(safe-area-inset-left,0px));display:none}nav.open{display:flex}nav a{padding:14px 0;border-bottom:1px solid #14246b}nav a.on::after{display:none}.burger{display:block}.hr{margin-left:auto}}@media(max-width:620px){.hr .ib.hide-s{display:none}}
+
+:root{--bg:#050b24;--card:#0a1738;--card2:#0c1d46;--line:#1b3a7a;--red:#ff2b43;--blue:#2d7bff;--green:#19d36b;--cyan:#2fd0ff;--mut:#a9b9ea;color-scheme:dark}
+html{-webkit-text-size-adjust:100%}
+body{background:radial-gradient(900px 400px at 0 0,#3a0a2a55,transparent),radial-gradient(900px 500px at 100% 20%,#0a3a9a44,transparent),var(--bg);color:#fff;font:14px/1.5 Poppins,"Segoe UI",system-ui,Arial,sans-serif;overflow-x:clip;min-height:100vh;display:flex;flex-direction:column}
+body>main{flex:1}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding-left:max(var(--gut,16px),env(safe-area-inset-left,0px));padding-right:max(var(--gut,16px),env(safe-area-inset-right,0px))}
+.pg{padding:32px 0 56px}
+.pg h1{font-size:clamp(1.5rem,4vw,2rem);margin-bottom:6px}
+.sub{color:var(--mut);margin-bottom:22px}
+.card{background:linear-gradient(#0b1b45,#08132f);border:1px solid var(--line);border-radius:16px;padding:20px}
+.card h2{font-size:1.1rem;margin-bottom:14px}
+.narrow{max-width:460px;margin:0 auto}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#06102f;border:1px solid var(--line);border-radius:12px;padding:4px;margin-bottom:18px}
+.tabs button{background:none;border:0;color:var(--mut);font:600 .9rem Poppins,system-ui;padding:11px;border-radius:9px;cursor:pointer;min-height:44px}
+.tabs button.on{background:linear-gradient(90deg,#ff2b43,#5a3bff);color:#fff}
+label.f{display:block;margin-bottom:14px;font-size:.8rem;color:var(--mut);font-weight:500}
+label.f input,label.f select,label.f textarea{display:block;width:100%;margin-top:6px;background:#07122f;border:1px solid var(--line);border-radius:10px;color:#fff;padding:12px 14px;font:16px Poppins,system-ui;min-height:46px}
+label.f textarea{min-height:80px;resize:vertical}
+label.f input:focus,label.f select:focus,label.f textarea:focus{outline:2px solid var(--cyan);outline-offset:1px;border-color:transparent}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;color:#fff;font:600 .95rem Poppins,system-ui;cursor:pointer;border-radius:999px;padding:0 26px;min-height:48px;background:linear-gradient(90deg,#ff1744,#ff3b5c 60%,#5a3bff);box-shadow:0 0 18px #ff174455;text-decoration:none}
+.btn.full{width:100%}
+.btn.ghost{background:transparent;border:1px solid var(--line);box-shadow:none}
+.btn.green{background:linear-gradient(180deg,#2fd45a,#0f9a35);box-shadow:none}
+.btn[disabled]{opacity:.6;cursor:wait}
+.lnk{background:none;border:0;color:var(--cyan);cursor:pointer;font:inherit;padding:6px 0;text-decoration:underline}
+.msg{border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:.85rem;display:none}
+.msg.show{display:block}.msg.er{background:#3a0a1a;border:1px solid var(--red)}.msg.ok{background:#07301a;border:1px solid var(--green)}
+.demo{background:#2a2206;border:1px solid #b8941f;color:#ffe9a6;border-radius:10px;padding:10px 14px;font-size:.8rem;margin-bottom:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ord{border-top:1px solid var(--line);padding:14px 0}.ord:first-of-type{border-top:0}
+.ord .top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-weight:600}
+.ord small{color:var(--mut);display:block}
+.pill{display:inline-block;border-radius:999px;padding:2px 10px;font-size:.72rem;font-weight:700;background:#14295f;color:#cfe0ff;text-transform:capitalize}
+.pill.pending{background:#4a3a08;color:#ffd666}.pill.confirmed,.pill.delivered,.pill.shipped{background:#07301a;color:#6cf0a0}.pill.cancelled{background:#3a0a1a;color:#ff8da0}
+.li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid #14246b}.li:first-child{border-top:0}
+.tot{display:flex;justify-content:space-between;font-weight:700;font-size:1.05rem;padding-top:12px;margin-top:6px;border-top:1px solid var(--line)}
+.pay{display:grid;gap:8px;margin-bottom:14px}
+.pay label{display:flex;gap:10px;align-items:center;background:#07122f;border:1px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;min-height:46px}
+.pay input{accent-color:#ff2b43;width:18px;height:18px}
+.pay label:has(input:checked){border-color:var(--cyan);box-shadow:0 0 10px #2fd0ff44}
+.empty{text-align:center;color:var(--mut);padding:24px 0}
+footer.sf{border-top:2px solid;border-image:linear-gradient(90deg,#ff2b43,#2d7bff,#ff2b43) 1;background:#040a1f;padding:22px 0;font-size:.8rem;color:var(--mut)}
+footer.sf .wrap{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+footer.sf a{margin-right:14px;color:#cfe0ff}
+.hr .ib[data-in="1"]::after{content:"";position:absolute;right:-3px;bottom:-3px;width:9px;height:9px;border-radius:50%;background:var(--green);border:2px solid #071033}
+@media(max-width:800px){.grid2{grid-template-columns:1fr}}
+@media(max-width:480px){.row2{grid-template-columns:1fr}}
+
+
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></symbol><symbol id="heart" viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.500 4.500 0 0 1 8-2.800A4.500 4.500 0 0 1 20 10c0 6-8 11-8 11z"/></symbol><symbol id="cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/><path d="M2 3h3l2.7 12.4a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6"/></symbol><symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></symbol></defs></svg>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="YAPSTech home"><img class="logo-img" src="logo.webp" alt="YAPSTech" width="416" height="122"></a>
+    <nav id="nav" aria-label="Main">
+      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="software-development.html">Software Development</a><a href="projects.html">Our Projects</a><a href="YAPS_About_Us.html">About Us</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="hr">
+      <a class="ib" href="checkout.html" aria-label="Cart"><svg class="i"><use href="#cart"/></svg><b id="cc">0</b></a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><svg class="i"><use href="#menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main><div class="wrap pg">
+  <h1>Checkout</h1>
+  <p class="sub">Review your order and tell us where to deliver it.</p>
+  <div id="loading" class="empty">Loading&hellip;</div>
+  <div id="empty" class="card empty" hidden>Your cart is empty.<br><br><a class="btn" href="shop.html">Browse the shop</a></div>
+  <div id="gate" class="card narrow empty" hidden>Please sign in or create an account to place your order.<br><br>
+    <a class="btn" href="account.html?next=checkout.html">Sign in</a> <a class="btn ghost" href="account.html?next=checkout.html#signup">Create account</a></div>
+
+  <div id="main" class="grid2" hidden>
+    <form id="fOrd" class="card" novalidate>
+      <h2>Delivery details</h2>
+      <div id="omsg" class="msg" role="alert"></div>
+      <label class="f">Full name<input id="oN" autocomplete="name" required></label>
+      <div class="row2">
+        <label class="f">Phone / WhatsApp<input id="oT" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        <label class="f">District<select id="oD" required><option value="">Select district</option></select></label>
+      </div>
+      <label class="f">Delivery address / landmark<textarea id="oA" required placeholder="Area, street, nearest landmark"></textarea></label>
+      <h2 style="margin-top:6px">Payment</h2>
+      <div class="pay">
+        <label><input type="radio" name="pm" value="MTN Mobile Money" checked> MTN Mobile Money</label>
+        <label><input type="radio" name="pm" value="Airtel Money"> Airtel Money</label>
+        <label><input type="radio" name="pm" value="Cash on Delivery"> Cash on Delivery</label>
+      </div>
+      <p class="sub" style="font-size:.8rem;margin-bottom:14px">We confirm your order by phone/WhatsApp and share mobile money payment details before dispatch. Delivery cost depends on your location and is confirmed then.</p>
+      <label class="f">Notes (optional)<textarea id="oO"></textarea></label>
+      <button class="btn full" id="place" type="submit">Place order</button>
+    </form>
+    <div class="card">
+      <h2>Order summary</h2>
+      <div id="sum"></div>
+      <p style="margin-top:14px"><a class="lnk" href="shop.html">&larr; Keep shopping</a></p>
+    </div>
+  </div>
+
+  <div id="done" class="card narrow" hidden>
+    <h2>Order placed &#10003;</h2>
+    <p class="sub" style="margin-bottom:10px">Thank you! Your order number is <b id="dRef"></b>.</p>
+    <p style="margin-bottom:16px">Send it to us on WhatsApp so we can confirm and arrange payment and delivery quickly.</p>
+    <p style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn green" id="dWa" target="_blank" rel="noopener" href="#">Confirm on WhatsApp</a><a class="btn ghost" href="account.html">View my orders</a></p>
+  </div>
+</div></main>
+
+<footer class="sf"><div class="wrap"><span>&copy; 2025 YAPSTech, Kampala, Uganda</span><span><a href="shop.html">Shop</a><a href="contact.html">Contact</a><a href="index.html">Home</a></span></div></footer>
+<script src="yaps-config.js"></script>
+<script src="yaps-app.js"></script>
+<script>
+(function(){
+  var b=document.getElementById('burger'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  function cnt(){var c=[];try{c=JSON.parse(localStorage.getItem('yaps_cart'))||[]}catch(e){}var t=c.reduce(function(a,i){return a+i.q},0),el=document.getElementById('cc');el.textContent=t;el.style.display=t?'':'none'}
+  cnt();window.addEventListener('storage',cnt);
+})();
+
+(function(){
+  var A=window.YAPSApp,$=function(s){return document.querySelector(s)};
+  var DIST=['Kampala','Wakiso','Mukono','Entebbe','Mpigi','Mityana','Luwero','Jinja','Iganga','Mbale','Tororo','Busia','Soroti','Lira','Gulu','Arua','Hoima','Masindi','Fort Portal','Kasese','Mbarara','Kabale','Masaka','Other'];
+  $('#oD').innerHTML+=DIST.map(function(d){return '<option>'+d+'</option>'}).join('');
+  function msg(t){var el=$('#omsg');el.textContent=t||'';el.className='msg'+(t?' show er':'')}
+  function render(cart){
+    var t=cart.reduce(function(a,i){return a+i.p*i.q},0);
+    $('#sum').innerHTML=cart.map(function(i,k){return '<div class="li"><span>'+i.q+' &times; '+A.esc(i.n)+'</span><span>'+A.fmt(i.p*i.q)+'</span></div>'}).join('')+'<div class="tot"><span>Total</span><span>'+A.fmt(t)+'</span></div>';
+  }
+  function start(){
+    var cart=A.cart();
+    $('#loading').hidden=true;
+    ['#empty','#gate','#main','#done'].forEach(function(s){$(s).hidden=true});
+    if(!cart.length){$('#empty').hidden=false;return}
+    A.user().then(function(u){
+      if(!u){$('#gate').hidden=false;return}
+      $('#main').hidden=false;render(cart);
+      if(!$('#oN').value)$('#oN').value=u.name||'';if(!$('#oT').value)$('#oT').value=u.phone||'';
+    });
+  }
+  $('#fOrd').onsubmit=function(e){
+    e.preventDefault();msg('');
+    var o={name:$('#oN').value.trim(),phone:$('#oT').value.trim(),district:$('#oD').value,address:$('#oA').value.trim(),payment:document.querySelector('input[name=pm]:checked').value,notes:$('#oO').value.trim(),items:A.cart()};
+    if(!o.name||!o.phone||!o.district||!o.address){msg('Please fill in your name, phone, district and delivery address.');return}
+    if(!/^[+\d][\d\s-]{8,}$/.test(o.phone)){msg('Please enter a valid phone number.');return}
+    var b=$('#place');b.disabled=true;b.textContent='Placing order\u2026';
+    A.createOrder(o).then(function(r){
+      A.clearCart();
+      var t='Hello YAPSTech, I placed order '+r.ref+':\n'+o.items.map(function(i){return '- '+i.q+' x '+i.n+' ('+A.fmt(i.p*i.q)+')'}).join('\n')+'\nTotal: '+A.fmt(r.total)+'\nPayment: '+o.payment+'\nDeliver to: '+o.address+', '+o.district+'\nPhone: '+o.phone+'\nPlease confirm.';
+      $('#dRef').textContent=r.ref;$('#dWa').href=A.wa(t);
+      $('#main').hidden=true;$('#done').hidden=false;window.scrollTo(0,0);
+      var c=document.getElementById('cc');c.textContent='0';c.style.display='none';
+    }).catch(function(x){msg(x.message);b.disabled=false;b.textContent='Place order'});
+  };
+  document.addEventListener('yaps:auth',start);
+  start();
+})();
+
+</script>
+</body>
+</html>

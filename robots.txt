@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brians124.github.io/YAPSTech/sitemap.xml
