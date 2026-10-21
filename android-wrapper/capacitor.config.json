@@ -1,0 +1,6 @@
+{
+  "appId": "com.yaps.music",
+  "appName": "YAPS Music",
+  "webDir": "www",
+  "android": { "allowMixedContent": true }
+}
